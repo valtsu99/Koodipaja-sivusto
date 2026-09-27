@@ -1,2 +1,111 @@
 /* Koodipaja Oy - tyylitiedosto
    Tämä tiedosto täydennetään seuraavissa vaiheissa. */
+
+   /* # värimuuttujia */
+
+   :root {
+      --vari-tausta: #eff2f1;
+      --vari-tumma: #10141c;
+      --vari-teksti: #1c2230;
+      --vari-teksti-vaalea: #f4f6f5;
+      --vari-aksentti: #e8a13d;
+      --vari-sininen: #3e7cb1;
+
+
+      --fontti-otsikko: "Space Grotesk", "Trebuchet MS", sans-serif;
+      --fontti-teksti: "Segoe UI", ARIAL, sans-serif;
+   }
+
+
+
+body {
+   margin: 0;
+   font-family: var(--fontti-teksti);
+   color: var(--vari-teksti);
+   background-color: var(--vari-tausta);
+   line-height: 1.6;
+
+}
+
+h1, h2, h3 {
+   font-family: var(--fontti-otsikko);
+   color: var(--vari-tumma);
+}
+
+header {
+   background-color: var(--vari-tumma);
+   color: var(--vari-teksti-vaalea);
+   padding: 1rem 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.logo {
+   font-family: var(--fontti-otsikko);
+   font-size: 1.4rem;
+   margin: 0;
+   color: var(--vari-aksentti);
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 1.6rem;
+   margin: 0;
+   padding: 0;
+}
+
+nav a {
+   color: var(--vari-teksti-vaalea);
+   text-decoration: none;
+   font-weight: 600;
+}
+
+nav a:hover {
+   color: var (--vari-aksentti);
+}
+
+main {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+section {
+   margin-bottom: 2.5rem;
+}
+
+.korttiruudukko {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.2rem;
+   margin-top: 1rem;
+   padding: 0;
+   list-style: none;
+}
+
+.korttiruudukko li {
+   background-color: #ffffff;
+   border: 1px solid #d4d9d7;
+   border-left: 5px solid var(--vari-aksentti);
+   padding: 1rem 1.4rem;
+   flex: 1 1 200px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+a {
+   color: var(--vari-sininen, #3e7cb1);
+}
+
+footer {
+   background-color: var(--vari-tumma);
+   color: #9aa4b2;
+   text-align: center;
+   padding: 1.2rem;
+   margin-top: 2rem;
+}
+
