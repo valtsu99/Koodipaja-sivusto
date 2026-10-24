@@ -25,6 +25,9 @@ body {
    background-color: var(--vari-tausta);
    line-height: 1.6;
 
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -60,16 +63,26 @@ nav a {
    color: var(--vari-teksti-vaalea);
    text-decoration: none;
    font-weight: 600;
+   padding: 0.3rem 0;
+   border-bottom: 2px solid transparent;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
    color: var (--vari-aksentti);
+   border-bottom: 2px solid var(--vari-aksentti);
+}
+
+nav a[aria-current="page"] {
+   color: var(--vari-aksentti);
+   border-bottom: 2px solid var(--vari-aksentti);
 }
 
 main {
    max-width: 1000px;
    margin: 0 auto;
    padding: 2rem;
+   width: 100%;
 }
 
 section {
@@ -77,20 +90,21 @@ section {
 }
 
 .korttiruudukko {
-   display: flex;
-   flex-wrap: wrap;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
    gap: 1.2rem;
    margin-top: 1rem;
-   padding: 0;
-   list-style: none;
 }
 
 .korttiruudukko li {
    background-color: #ffffff;
    border: 1px solid #d4d9d7;
    border-left: 5px solid var(--vari-aksentti);
-   padding: 1rem 1.4rem;
-   flex: 1 1 200px;
+   padding: 1.2rem 1.4rem;
+}
+
+.kortti h3 {
+    margin-top: 0;
 }
 
 * {
@@ -109,3 +123,126 @@ footer {
    margin-top: 2rem;
 }
 
+.kortti {
+    background-color: #ffffff;
+    border: 1px solid #d4d9d7;
+    border-left: 5px solid var(--vari-aksentti);
+    padding: 1.2rem 1.4rem;
+}
+
+.kortti h3 {
+    margin-top: 0;
+}
+
+/* --- Taulukko --- */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 1.5rem;
+   background-color: #ffffff;
+}
+
+caption {
+   text-align: left;
+   font-weight: 600;
+   margin-bottom: 0.6rem;
+}
+th, td {
+   border: 1px solid #d4d9d7;
+   padding: 0.75rem 1rem;
+   text-align: left;
+}
+
+thead th {
+   background-color: var(--vari-tumma);
+   color: var(--vari-teksti-vaalea);
+}
+
+tbody tr:nth-child(even) {
+   background-color: #f5f7f6;
+}
+
+/* --- Lomake (flexbox) --- */
+form {
+   background-color: #ffffff;
+   border: 1px solid #d4d9d7;
+   padding: 1.8rem;
+   max-width: 560px;
+   margin-top: 1.5rem;
+}
+
+.lomake-kentta {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1.2rem;
+}
+
+label {
+   font-weight: 600;
+   margin-bottom: 0.4rem;
+}
+
+input,
+textarea,
+select {
+   font-family: var(--fontti-teksti);
+   font-size: 1rem;
+   padding: 0.6rem 0.7rem;
+   border: 1px solid #d4d9d7;
+   border-radius: 3px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+   outline: 2px solid var(--vari-sininen);
+   outline-offset: 1px;
+}
+
+button {
+   font-family: var(--fontti-otsikko);
+   background-color: var(--vari-aksentti);
+   color: var(--vari-tumma);
+   border: none;
+   padding: 0.7rem 1.6rem;
+   font-size: 1rem;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #c9821f;
+}
+
+.kortti img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin-bottom: 1rem;
+}
+
+/* --- Responsiivisuus --- */
+@media (max-width: 640px) {
+   header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+      padding: 1rem 1.2rem;
+   }
+
+   nav ul {
+      gap: 1rem;
+   }
+   
+   h1 {
+      font-size: 1.8rem;
+   }
+   main {
+      padding: 1.5rem 1.2rem 3rem;
+   }
+
+   th, td {
+      padding: 0.5rem 0.6rem;
+      font-size: 0.9rem;
+   }
+}

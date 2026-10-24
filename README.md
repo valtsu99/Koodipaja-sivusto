@@ -33,6 +33,6 @@ koodipaja/
 ## Työn eteneminen
 
 - [x] Vaihe 1: aihe, sivusuunnitelma, kansiorakenne, ensimmäinen HTML-sivu
-- [] Vaihe 2: loput sivut ja sisältö
+- [x] Vaihe 2: loput sivut ja sisältö
 - [] Vaihe 3: CSS-tyylittely
 - [] Vaihe 4: viimeistely ja julkaisu GitHub Pagesissa

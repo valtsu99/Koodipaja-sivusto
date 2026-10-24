@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yhteystiedot - Koodipaja Oy</title>
+    <meta name="description" content="Koodipaja Oy suunnittelee ja toteuttaa verkkosivuja, verkkokauppoja ja räätälöityjä ohjelmistoja pienille ja keskisuurille yrityksille.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <p class="logo">KOODIPAJA
+        </p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="palvelut.html">Palvelut</a></li>
+                <li><a href="referenssit.html">Referenssit</a></li>
+                <li><a href="yhteys.html" aria-current="page">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section>
+        <h1>Ota yhteyttä</h1>
+        <p>
+            Kerro meille projektistasi, niin palaamme asiaan mahdollisimman pian.
+        </p>
+        <address>
+            Koodipaja Oy<br>
+            Kauppurienkatu 12<br>
+            20100 Turku<br>
+            <a href="mailto:info@koodipaja.fi">info@koodipaja.fi</a>
+        </address>
+    </section>
+    <h2>Yhteydenottolomake</h2>
+        <form action="#" method="post">
+            <div class="lomake-kentta">
+                <label for="nimi">Nimi</label>
+                <input type="text" id="nimi" name="nimi" required>
+            </div>
+
+            <div class="lomake-kentta">
+                <label for="sahkoposti">Sähköposti</label>
+                <input type="email" id="sahkoposti" name="sahkoposti" required>
+            </div>
+
+            <div class="lomake-kentta">
+                <label for="aihe">Mistä on kyse?</label>
+                <select id="aihe" name="aihe">
+                    <option value="verkkosivut">Verkkosivut</option>
+                    <option value="verkkokauppa">Verkkokauppa</option>
+                    <option value="ohjelmisto">Räätälöity ohjelmisto</option>
+                    <option value="muu">Jokin muu</option>
+                </select>
+            </div>
+
+            <div class="lomake-kentta">
+                <label for="viesti">Viesti</label>
+                <textarea id="viesti" name="viesti" rows="5" required></textarea>
+            </div>
+
+            <button type="submit">Lähetä viesti</button>
+        </form>
+    </section>
+</main>
+
+    <footer>
+        <p>&copy; 2026 Koodipaja Oy</p>
+    </footer>
+
+</body>
+</html>
