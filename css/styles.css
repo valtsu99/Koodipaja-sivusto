@@ -36,6 +36,9 @@ h1, h2, h3 {
 }
 
 header {
+   position: sticky;
+   top: 0;
+   z-index: 100;
    background-color: var(--vari-tumma);
    color: var(--vari-teksti-vaalea);
    padding: 1rem 2rem;
@@ -69,7 +72,7 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-   color: var (--vari-aksentti);
+   color: var(--vari-aksentti);
    border-bottom: 2px solid var(--vari-aksentti);
 }
 
@@ -124,6 +127,7 @@ footer {
 }
 
 .kortti {
+   position: relative;
     background-color: #ffffff;
     border: 1px solid #d4d9d7;
     border-left: 5px solid var(--vari-aksentti);
@@ -245,4 +249,16 @@ button:hover {
       padding: 0.5rem 0.6rem;
       font-size: 0.9rem;
    }
+}
+
+.kortti::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 0 2rem 2rem 0;
+   border-color: transparent var(--vari-aksentti) transparent transparent;
 }

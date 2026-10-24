@@ -33,6 +33,14 @@ koodipaja/
 ## Työn eteneminen
 
 - [x] Vaihe 1: aihe, sivusuunnitelma, kansiorakenne, ensimmäinen HTML-sivu
-- [x] Vaihe 2: loput sivut ja sisältö
-- [] Vaihe 3: CSS-tyylittely
-- [] Vaihe 4: viimeistely ja julkaisu GitHub Pagesissa
+- [x] Vaihe 2: ulkoinen CSS, värit, fontit, välit ja semanttinen rakenne
+- [x] Vaihe 3: layout (Grid ja Flexbox), kaikki neljä sivua ja navigaatio
+- [x] Vaihe 4: kuvat, video ja ääni sekä position-ominaisuus
+- [ ] Vaihe 5: viimeistely, validointi ja lopullinen julkaisu GitHub Pagesissa
+
+
+## Median lähteet ja tekijänoikeudet
+
+- Esittelyvideo `media/koodipaja-esittely.mp4`: oma tuotanto.
+- Tunnusääni `media/koodipaja-jingle.mp3`: oma tuotanto.
+- Referenssi-sivun kuvat `images/referenssi-*.jpg`: itse tehdyt paikkakuvat, mielikuvitus yritykset.
