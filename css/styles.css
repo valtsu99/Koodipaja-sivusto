@@ -262,3 +262,45 @@ button:hover {
    border-width: 0 2rem 2rem 0;
    border-color: transparent var(--vari-aksentti) transparent transparent;
 }
+
+.taulukko-kaari {
+   overflow-x: auto;
+}
+
+tfoot td {
+   font-size: 0.9rem;
+   color: #4a5363;
+}
+
+/* --- Lomakkeen lisäosat --- */
+fieldset {
+   border: 1px solid #d4d9d7;
+   padding: 1rem 1.2rem;
+   margin: 0 0 1.2rem;
+}
+
+legend {
+   font-family: var(--fontti-otsikko);
+   font-weight: 700;
+   padding: 0 0.4rem;
+}
+
+.valinta {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   font-weight: 400;
+   margin-bottom: 0.4rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+   accent-color: var(--vari-sininen);
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+   border-color: #b3261e;
+   background-color: #fdf1f0;
+}
